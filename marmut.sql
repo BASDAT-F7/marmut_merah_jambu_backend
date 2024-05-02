@@ -19,7 +19,7 @@ CREATE TABLE EPISODE(
     judul VARCHAR(100) NOT NULL,
     deskripsi VARCHAR(500) NOT NULL,
     durasi INTEGER NOT NULL,
-    tanggal_rilis DATE NOT NULL
+    tanggal_rilis DATE NOT NULL,
     FOREIGN KEY(id_konten_podcast) REFERENCES PODCAST (id_konten) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
