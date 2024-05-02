@@ -41,8 +41,8 @@ CREATE TABLE KONTEN(
 );
 
 CREATE TABLE GENRE(
-    id_konten UUID
-    genre VARCHAR(50)
+    id_konten UUID,
+    genre VARCHAR(50),
     PRIMARY KEY(id_konten, genre),
     FOREIGN KEY(id_konten) REFERENCES KONTEN (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
@@ -53,7 +53,7 @@ CREATE TABLE EPISODE(
     judul VARCHAR(100) NOT NULL,
     deskripsi VARCHAR(500) NOT NULL,
     durasi INTEGER NOT NULL,
-    tanggal_rilis DATE NOT NULL
+    tanggal_rilis DATE NOT NULL,
     FOREIGN KEY(id_konten_podcast) REFERENCES PODCAST (id_konten) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
