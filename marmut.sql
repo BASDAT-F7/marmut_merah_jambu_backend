@@ -8,7 +8,7 @@ CREATE TABLE KONTEN(
 
 CREATE TABLE GENRE(
     id_konten UUID,
-    genre VARCHAR(50)
+    genre VARCHAR(50),
     PRIMARY KEY(id_konten, genre),
     FOREIGN KEY(id_konten) REFERENCES KONTEN (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
