@@ -340,14 +340,14 @@ INSERT INTO KONTEN VALUES ('a65345df-b0d3-454b-acf0-122c97f0f1ae','Anything You 
 ('e83e0440-70ea-41bd-8524-564e620f527a','Famous Last Words','2006-01-22 00:00:00',2006,5),
 ('70763e28-0aca-4327-a2a6-beac8600d4b6','Blood','2006-10-23 00:00:00',2006,3);
 
-INSERT INTO "PAKET" ("jenis","harga")
+INSERT INTO PAKET ("jenis","harga")
 VALUES
 ('1 Bulan',27500),
 ('3 Bulan',80000),
 ('6 Bulan',150000),
 ('1 Tahun',270000);
 
-INSERT INTO "PLAYLIST" ("id")
+INSERT INTO PLAYLIST ("id")
 VALUES
 ('c2a98d95-f688-41a9-adba-67829d61d5f5'),
 ('d09a4a68-5584-4310-8ed4-562f6da25439'),
@@ -360,7 +360,7 @@ VALUES
 ('360e899b-d2f0-45a0-83b5-d33f12650e62'),
 ('f28f21dc-ecf9-4ea0-b0ba-a3391230d79d');
 
-INSERT INTO "PEMILIK_HAK_CIPTA" ("id","rate_royalti")
+INSERT INTO PEMILIK_HAK_CIPTA ("id","rate_royalti")
 VALUES
 ('6372534e-9801-4a54-aa40-9f620d740c07',20),
 ('32cdd99b-e257-453f-80b1-ef47c4ed7a99',50),
@@ -410,33 +410,43 @@ VALUES
 ('95a8dbff-fb39-44ef-871d-86b1c6ea7916',50),
 ('e60a9e49-dc1b-4057-9dc3-892ff65c4b7f',30);
 
-INSERT INTO NON_PREMIUM VALUES ('usermarmut1@gmail.com'),
-	('usermarmut2@gmail.com'),
-	('usermarmut3@gmail.com'),
-	('usermarmut4@gmail.com'),
-	('usermarmut5@gmail.com'),
-	('usermarmut6@gmail.com'),
-	('usermarmut7@gmail.com'),
-	('usermarmut8@gmail.com'),
-	('usermarmut9@gmail.com'),
-	('usermarmut13@gmail.com'),
-	('usermarmut14@gmail.com'),
-	('usermarmut15@gmail.com'),
-	('usermarmut16@gmail.com'),
-	('usermarmut17@gmail.com'),
-	('usermarmut18@gmail.com'),
-	('usermarmut22@gmail.com'),
-	('usermarmut23@gmail.com'),
-	('usermarmut24@gmail.com'),
-	('usermarmut25@gmail.com'),
-	('usermarmut26@gmail.com'),
-	('usermarmut27@gmail.com'),
-	('reality_club_artist@gmail.com'),
-	('bring_me_the_horizon_artist@gmail.com'),
-	('rich_brian_artist@gmail.com'),
-	('niki_artist@gmail.com'),
-	('vierratale_artist@gmail.com'),
-	('dewa_19_artist@gmail.com'),
+INSERT INTO NON_PREMIUM ("email")
+VALUES
+('usermarmut1@gmail.com'),
+('usermarmut2@gmail.com'),
+('usermarmut3@gmail.com'),
+('usermarmut4@gmail.com'),
+('usermarmut5@gmail.com'),
+('usermarmut6@gmail.com'),
+('usermarmut7@gmail.com'),
+('usermarmut8@gmail.com'),
+('usermarmut9@gmail.com'),
+('usermarmut13@gmail.com'),
+('usermarmut14@gmail.com'),
+('usermarmut15@gmail.com'),
+('usermarmut16@gmail.com'),
+('usermarmut17@gmail.com'),
+('usermarmut18@gmail.com'),
+('usermarmut22@gmail.com'),
+('usermarmut23@gmail.com'),
+('usermarmut24@gmail.com'),
+('usermarmut25@gmail.com'),
+('usermarmut26@gmail.com'),
+('usermarmut27@gmail.com'),
+('reality_club_artist@gmail.com'),
+('bring_me_the_horizon_artist@gmail.com'),
+('rich_brian_artist@gmail.com'),
+('niki_artist@gmail.com'),
+('vierratale_artist@gmail.com'),
+('dewa_19_artist@gmail.com'),
+('iu_artist@gmail.com'),
+('new_jeans_artist@gmail.com'),
+('lomba_sihir_artist@gmail.com'),
+('henry_moodie_artist@gmail.com'),
+('nick_jonas_artist@gmail.com'),
+('.feast_artist@gmail.com'),
+('green_day_artist@gmail.com'),
+('hindia_artist@gmail.com');
 
 INSERT INTO PREMIUM VALUES ('usermarmut10@gmail.com'),
 	('usermarmut11@gmail.com'),
@@ -548,7 +558,7 @@ INSERT INTO GENRE VALUES ('a65345df-b0d3-454b-acf0-122c97f0f1ae','Indie Pop'),
 ('e83e0440-70ea-41bd-8524-564e620f527a','Hard Rock'),
 ('70763e28-0aca-4327-a2a6-beac8600d4b6','Hard Rock');
 
-INSERT INTO "TRANSACTION" ("id","jenis_paket","email","timestamp_dimulai","timestamp_berakhir","metode_bayar","nominal")
+INSERT INTO TRANSACTION ("id","jenis_paket","email","timestamp_dimulai","timestamp_berakhir","metode_bayar","nominal")
 VALUES
 ('095b97f5-b428-458b-aaa2-1c8cc22c1e96','1 Bulan','usermarmut1@gmail.com','''2023-09-02 13:57:24''','''2023-10-02 13:57:24''','E-Wallet',27500),
 ('14f8a0fa-afde-493c-b69b-3477c67a2a7d','3 Bulan','usermarmut2@gmail.com','''2023-02-14 08:54:09''','''2023-05-14 08:54:09''','E-Wallet',80000),
@@ -556,7 +566,7 @@ VALUES
 ('f41579dd-d130-4aa9-b21f-7400b331ebb0','1 Tahun','usermarmut4@gmail.com','''2023-08-25 01:39:28''','''2024-08-25 01:39:28''','Kartu Kredit',270000),
 ('2dad0800-1e5a-43a1-a7b4-22b5346f8c55','3 Bulan','usermarmut5@gmail.com','''2023-10-08 12:43:35''','''2024-01-08 12:43:35''','Transfer Bank',80000);
 
-INSERT INTO "SONGWRITER" ("id","email_akun","id_pemilik_hak_cipta")
+INSERT INTO SONGWRITER ("id","email_akun","id_pemilik_hak_cipta")
 VALUES
 ('5fb4ee61-122e-497c-a4c2-123f621fc6f8','usermarmut13@gmail.com','aa2fe6f5-5566-4616-a84f-42800d7c4b5a'),
 ('8543fae2-0ada-4c18-b61e-92d06e6bd007','usermarmut14@gmail.com','ab934dd3-2893-4f63-b41c-35a170cd7364'),
@@ -569,7 +579,7 @@ VALUES
 ('f8a0f096-46cc-40af-9c05-747afcc9fdb2','usermarmut21@gmail.com','95a8dbff-fb39-44ef-871d-86b1c6ea7916'),
 ('9b6d27d8-effc-4986-a0e3-9ba9100d50f9','usermarmut22@gmail.com','e60a9e49-dc1b-4057-9dc3-892ff65c4b7f');
 
-INSERT INTO "USER_PLAYLIST" ("email_pembuat","id_user_playlist","judul","deskripsi","jumlah_lagu","tanggal_dibuat","id_playlist","total_durasi")
+INSERT INTO USER_PLAYLIST ("email_pembuat","id_user_playlist","judul","deskripsi","jumlah_lagu","tanggal_dibuat","id_playlist","total_durasi")
 VALUES
 ('usermarmut19@gmail.com','c46c0747-1995-4397-a57f-5671b6b18f09','reflection','a playlist about myself i guess.',1,'2023-10-02''','4f7208a3-5bc9-4d8d-a6aa-a45a53a1cb7d',4),
 ('usermarmut20@gmail.com','ead81c3c-f7d1-4142-a55a-9bbc14f3304e','Partner in Crime','You know who you are :)',1,'2024-04-25''','1a73677e-6d0b-4e49-91f5-1381bfea1924',4),
@@ -578,14 +588,14 @@ VALUES
 ('usermarmut23@gmail.com','e92da81b-605b-44cc-9aaa-a6f01804987c','Night by the Bay','"it''s better than nothing, right?"',1,'2023-02-14''','360e899b-d2f0-45a0-83b5-d33f12650e62',3),
 ('usermarmut24@gmail.com','84472977-b4cd-4227-ba83-c5be155ae9c1','friend recs','lagu fav kalian semua wkwk',1,'2023-12-12''','f28f21dc-ecf9-4ea0-b0ba-a3391230d79d',3);
 
-INSERT INTO "CHART" ("tipe","id_playlist")
+INSERT INTO CHART ("tipe","id_playlist")
 VALUES
 ('Daily Top 20','c2a98d95-f688-41a9-adba-67829d61d5f5'),
 ('Weekly Top 20','d09a4a68-5584-4310-8ed4-562f6da25439'),
 ('Monthly Top 20','9e6a28e8-47b7-440f-815e-b0c65c4b5118'),
 ('Yearly Top 20','5f9dbb9d-88a0-4ce4-984b-7e89e778366d');
 
-INSERT INTO "LABEL" ("id","nama","email","password","kontak","id_pemilik_hak_cipta")
+INSERT INTO LABEL ("id","nama","email","password","kontak","id_pemilik_hak_cipta")
 VALUES
 ('473358d6-5f9b-45b7-8dbd-705dac769493','Sony','sony_label@gmail.com','SonyGanteng123','@sony_official','6372534e-9801-4a54-aa40-9f620d740c07'),
 ('aa83a553-9500-4b5a-b6fa-74e13a4d4edd','Warner','warner_label@gmail.com','WarnerGanteng123','@warner_official','32cdd99b-e257-453f-80b1-ef47c4ed7a99'),
@@ -602,7 +612,7 @@ VALUES
 ('4514746e-3ff4-4e58-b5a8-b6ca0f14b9d1','Universal','universal_label@gmail.com','UniversalGanteng123','@universal_official','3f241ec3-d95c-4e80-b404-663cd1a1f4d6'),
 ('669a147c-0f1f-4ccd-8c69-e0cbaf906358','ADOR','ador_label@gmail.com','ADORGanteng123','@ador_official','8c70a18f-ded2-4471-b722-1e5490f594d0');
 
-INSERT INTO "ARTIST" ("id","email_akun","id_pemilik_hak_cipta")
+INSERT INTO ARTIST ("id","email_akun","id_pemilik_hak_cipta")
 VALUES
 ('ef8df2db-9d36-4a32-8e5f-047dd4e0de37','bring_me_the_horizon_artist@gmail.com','0e204ecb-d646-4653-ac2e-576cd62a5249'),
 ('46295b4c-5737-41d6-b722-3b928f0c2019','linkin_park_artist@gmail.com','9ff3087e-34b9-4c48-b9a3-4ba43b788aa0'),
@@ -628,7 +638,7 @@ VALUES
 ('9b92f1ad-c544-4183-85d7-b6cbf3d71fce','lomba_sihir_artist@gmail.com','73873e54-57ed-4db4-abc4-6abcc2e50a2c'),
 ('93bf77b1-7605-4646-b9d1-a62a8ec2548e','.feast_artist@gmail.com','286644cc-d3d8-4a75-8d25-67cfc3b46587');
 
-INSERT INTO "PODCAST" ("id_konten","email_podcaster")
+INSERT INTO PODCAST ("id_konten","email_podcaster")
 VALUES
 ('94fbb145-f819-49a8-ad01-79b040d36f68','usermarmut19@gmail.com'),
 ('4900c472-2794-4ba8-8cb3-3dd03086fd68','usermarmut5@gmail.com'),
@@ -636,7 +646,7 @@ VALUES
 ('c361b55a-dc8d-46b6-8a97-93fa7df0a3ac','usermarmut26@gmail.com'),
 ('829027cb-4eee-4435-88c2-fdefb5069ca0','usermarmut20@gmail.com');
 
-INSERT INTO "AKUN_PLAY_USER_PLAYLIST" ("email_pemain","id_user_playlist","email_pembuat","waktu")
+INSERT INTO AKUN_PLAY_USER_PLAYLIST ("email_pemain","id_user_playlist","email_pembuat","waktu")
 VALUES
 ('usermarmut1@gmail.com','c46c0747-1995-4397-a57f-5671b6b18f09','usermarmut19@gmail.com','2024-01-01 00:00:00'''),
 ('usermarmut2@gmail.com','ead81c3c-f7d1-4142-a55a-9bbc14f3304e','usermarmut20@gmail.com','2024-01-08 12:34:56'''),
@@ -654,7 +664,7 @@ VALUES
 ('usermarmut14@gmail.com','ead81c3c-f7d1-4142-a55a-9bbc14f3304e','usermarmut20@gmail.com','2024-04-01 19:20:30'''),
 ('usermarmut15@gmail.com','32355664-70e9-4c88-9426-d5c739a9b51c','usermarmut21@gmail.com','2024-04-08 04:56:12''');
 
-INSERT INTO "ALBUM" ("id","judul","jumlah_lagu","id_label","total_durasi")
+INSERT INTO ALBUM ("id","judul","jumlah_lagu","id_label","total_durasi")
 VALUES
 ('10919023-67a1-47bf-a16b-029b172c4707','amo',3,'473358d6-5f9b-45b7-8dbd-705dac769493',10),
 ('d7c62a6e-fdf1-4c6b-bde5-198a0b408bfc','The Black Parade',3,'aa83a553-9500-4b5a-b6fa-74e13a4d4edd',12),
@@ -683,7 +693,7 @@ VALUES
 ('9a2b00b1-878c-4444-ab84-6ab638daa3ff','Speak Now (Taylor''s Version)',2,'4514746e-3ff4-4e58-b5a8-b6ca0f14b9d1',8),
 ('d6477faf-75ee-4d82-8d7b-7e5bb0475db7','Midnights',2,'4514746e-3ff4-4e58-b5a8-b6ca0f14b9d1',7),
 ('a68c8d48-c7ea-4d13-ab1c-9d324fa1a1c8','NewJeans ''Super Shy''',2,'669a147c-0f1f-4ccd-8c69-e0cbaf906358',7),
-('2392876b-8745-474b-a537-c947cef7a0f9','Selamat Datang di Ujung Dunia',2,'e3ffc992-458e-4f89-b49b-d4df24f58ec4',5),
+('2392876b-8745-474b-a537-c947cef7a0f9','Selamat Datang di Ujung Dunia',2,'e3ffc992-458e-4f89-b49b-d4df24f58ec4',5);
 
 INSERT INTO EPISODE VALUES ('c530200d-e142-437f-9b1e-383e9eb61066','94fbb145-f819-49a8-ad01-79b040d36f68','interaksi diri.#berKata','kita banyak bicara sama orang tentang semua hal, tapi kita minim interaksi sama diri sendiri,
 dan itu yang bikin kita jadi sering salah ngerti. dan di episode ini, aku kasih resep rahasianya.',8,'2024-01-26 00:00:00'),
@@ -712,7 +722,7 @@ membahas Spotify Wrapped
 Dunia Kerja','Untuk bisa mendapatkan yang kita inginkan, namun berbenturan dengan apa yang diinginkan orang 
 lain, kita perlu menerapkan prinsip negosiasi ini!',5,'2022-07-17 00:00:00');
 
-INSERT INTO "SONG" ("id_konten","id_artist","id_album","total_play","total_download")
+INSERT INTO SONG ("id_konten","id_artist","id_album","total_play","total_download")
 VALUES
 ('a65345df-b0d3-454b-acf0-122c97f0f1ae','3faaa98b-84cb-4c8e-b3b6-7d70e63ca07c','10919023-67a1-47bf-a16b-029b172c4707',5,1),
 ('d4af5b64-3bac-47d2-b18c-c635bd844fe6','3faaa98b-84cb-4c8e-b3b6-7d70e63ca07c','d7c62a6e-fdf1-4c6b-bde5-198a0b408bfc',5,1),
@@ -792,7 +802,7 @@ VALUES
 ('e83e0440-70ea-41bd-8524-564e620f527a','57036ef8-83f6-48f7-b1d6-315923caacc3','cfeca246-c601-48ca-8180-18d5a1883dce',0,0),
 ('70763e28-0aca-4327-a2a6-beac8600d4b6','57036ef8-83f6-48f7-b1d6-315923caacc3','338299ac-01cd-4895-a182-6b1919f1db77',0,0);
 
-INSERT INTO "ROYALTI" ("id_pemilik_hak_cipta","id_song","jumlah")
+INSERT INTO ROYALTI ("id_pemilik_hak_cipta","id_song","jumlah")
 VALUES
 ('410c9c4d-5fc8-4873-8106-6773a03f07cd','a65345df-b0d3-454b-acf0-122c97f0f1ae',120),
 ('410c9c4d-5fc8-4873-8106-6773a03f07cd','d4af5b64-3bac-47d2-b18c-c635bd844fe6',120),
